@@ -1,55 +1,87 @@
-body{
+body {
     margin: 0;
-    /* display: flex;
+    display: flex;
     justify-content: center;
-    align-items: center; */
+    align-items: center;
     height: 100vh;
+    background-color: #f0f0f0; /* Light background for contrast */
+    font-family: Arial, sans-serif;
 }
 
-
-#calculator{
-    background-color: rgba(0, 0, 0, 0.651);
+#calculator {
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 15px;
-    max-width: 500px;
+    max-width: 90%;
+    width: 100%;
     overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 10px;
 }
 
-#display{
+#display {
     width: 100%;
     padding: 20px;
-    font-size: 5rem;
-    text-align: left;
+    font-size: 3rem;
+    text-align: right;
     border: none;
-    background-color: rgba(0, 0, 0, 0.651);
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
-
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
 }
 
-#keys{
+#keys {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    padding: 25px;
 }
 
-button{
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
+button {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
     border: none;
-    background-color: rgba(0, 0, 0, 0.459);
+    background-color: rgba(0, 0, 0, 0.6);
     color: white;
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 2rem;
     cursor: pointer;
+    transition: background-color 0.2s;
 }
 
-button:hover{
-    background-color: rgba(0, 0, 0, 0.659);
+button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
-.operator-btn{
-    background-color: rgba(255, 166, 0, 0.801);
+
+.operator-btn {
+    background-color: rgba(255, 166, 0, 0.8);
 }
-.operator-btn:hover{
-    background-color: rgba(255, 166, 0, 0.600);
+
+.operator-btn:hover {
+    background-color: rgba(255, 166, 0, 0.6);
+}
+
+/* Responsive adjustments for tablets and smaller devices */
+@media (max-width: 768px) {
+    #display {
+        font-size: 2.5rem;
+        padding: 15px;
+    }
+    button {
+        padding: 15px;
+        font-size: 1.5rem;
+    }
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 480px) {
+    #display {
+        font-size: 2rem;
+        padding: 10px;
+    }
+    button {
+        padding: 10px;
+        font-size: 1.2rem;
+    }
 }
