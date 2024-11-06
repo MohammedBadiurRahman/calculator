@@ -1,2 +1,2 @@
-# calculator
+# Calculator
 My Calculator App
